@@ -46,7 +46,7 @@ retrieve <- function(d)
   data <- d
   data$newDate = as.Date(data$Date,format='%d/%m/%Y')
   data$week = week(data$newDate)
-  temp <- data[data1$week == "5",]
+  temp1<- data[data$week == "5",]
   # apply a specific time window on a weekday and weekend on each dataset
   temp1$day_of_week = wday(temp1$newDate,week_start = getOption("lubridate.week.start", 1))
   n <- factor(temp1$Time)
