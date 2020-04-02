@@ -59,7 +59,7 @@ retrieve <- function(d)
   
   #weekend
   tempe1 <- temp1[temp1$day_of_week==7,]
-  weekend1 = tempe1[(tempe1$hours>=10) | (tempe1$hours<=15),]
+  weekend1 = tempe1[(tempe1$hours>=10) & (tempe1$hours<=15),]
   
   
   # apply moving average on that dataset with a sliding window of 7
